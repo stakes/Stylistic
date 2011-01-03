@@ -1,0 +1,10 @@
+Description:
+    This generator will make your Rails project so stylistic by installing (better) default scaffold styles, popular CSS grid frameworks and jQuery.
+
+Example:
+    rails generate stylistic
+
+    This will create:
+        public/stylesheets/stylistic-scaffold.css
+				public/stylesheets/html5reset.css
+				public/stylesheets/framework/960.css
