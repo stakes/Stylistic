@@ -9,13 +9,13 @@ class Stylistic < ::Rails::Railtie
   config.before_configuration do
         
     javascripts = []
-    Dir.foreach(::Rails.root.join("public/javascripts/jquery")) { |file| javascripts << file.to_s if /.js/.match(file.to_s) } if File.directory(::Rails.root.join("public/javascripts/jquery"))
+    Dir.foreach(::Rails.root.join("public/javascripts/jquery")) { |file| javascripts << 'jquery/'+file.to_s if /.js/.match(file.to_s) } if File.directory?(::Rails.root.join("public/javascripts/jquery"))
     
     stylesheets = []
-    Dir.foreach(::Rails.root.join("public/stylesheets/")) { |file| stylesheets << file.to_s if /stylistic-scaffold.css/.match(file.to_s) } if File.directory(::Rails.root.join("public/stylesheets/"))
+    Dir.foreach(::Rails.root.join("public/stylesheets/")) { |file| stylesheets << file.to_s if /stylistic-scaffold.css/.match(file.to_s) } if File.directory?(::Rails.root.join("public/stylesheets/"))
     
     framework = []
-    Dir.foreach(::Rails.root.join("public/stylesheets/framework/")) { |file| framework << 'framework/'+file.to_s if /.css/.match(file.to_s) } if File.directory(::Rails.root.join("public/stylesheets/framework/"))
+    Dir.foreach(::Rails.root.join("public/stylesheets/framework/")) { |file| framework << 'framework/'+file.to_s if /.css/.match(file.to_s) } if File.directory?(::Rails.root.join("public/stylesheets/framework/"))
 
     ActionView::Helpers::AssetTagHelper.register_javascript_expansion :stylistic => javascripts
     ActionView::Helpers::AssetTagHelper.register_stylesheet_expansion :stylistic => framework | stylesheets

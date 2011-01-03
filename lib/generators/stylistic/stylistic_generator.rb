@@ -52,8 +52,10 @@ class StylisticGenerator < ::Rails::Generators::Base
     end
     
     def clobber_cssframework
-      Dir.foreach(@@framework_dest) do |file|
-        remove_file File.join(@@framework_dest, file.to_s) if /.css/.match(file.to_s)
+      if File.directory?(@@framework_dest)
+        Dir.foreach(@@framework_dest) do |file|
+          remove_file File.join(@@framework_dest, file.to_s) if /.css/.match(file.to_s)
+        end
       end
     end
     
