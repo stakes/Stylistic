@@ -1,0 +1,176 @@
+body {
+	
+	background-color: #eee;
+	margin: 12px;
+	
+}
+
+/* Typography (baseline grid should be divisible by 12px) */
+
+body, form, input, textarea, select, select option {
+	
+	font: 16px/1.5 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	color: #333;
+	
+}
+
+h1, h2, h3, h4, h5, h6, lh {
+	
+	font-weight: bold;
+	text-shadow: 0 1px 0 #fff;
+	
+}
+
+h1 {
+	
+	font-size: 3.5em;
+	line-height: 1.3;
+	letter-spacing: -.05em;
+	margin-bottom: .43em;
+	
+}
+
+h2 {
+	
+	font-size: 2.5em;
+	line-height: 1.2;
+	letter-spacing: -.025em;
+	margin-bottom: .6em;
+	
+}
+
+h3, lh {
+	
+	font-size: 1.875em;
+	line-height: 1.2;
+	margin-bottom: .8em;
+	
+}
+
+h4 {
+	
+	font-size: 1.625em;
+	line-height: 1.4;
+	margin-bottom: .95em;
+	
+}
+
+h5 {
+	
+	font-size: 1em;
+	margin-bottom: 1.5em;
+	
+}
+
+h6 {
+	
+	font-size: 0.875em;
+	line-height: 1.75em;
+	margin-bottom: 1.75em;
+	
+}
+
+p {
+	
+	margin-bottom: 1.5em;
+	
+}
+
+hr {
+	
+	border: 0;
+	border-bottom: 1px solid #fff;
+	height: 1px;
+	background-color: #ccc;
+	
+}
+
+
+/* Form styles */
+
+div.field, div.actions {
+	
+  margin-bottom: 12px;
+
+}
+
+label {
+	
+	font-size: .875em;
+	font-weight: bold;
+	color: #555;
+	
+}
+
+input[type="text"], input[type="email"], input[type="password"], textarea {
+	
+	border: 1px solid #aaa;
+	padding: 3px 6px;
+	
+}
+
+
+/* Rails scaffold flash messages and errors */
+
+#notice, .success {
+
+  background-color: #ccffcc;
+	color: #006600;
+	border: 1px solid #006600;
+	padding: 6px 12px;
+	
+}
+
+#alert, .notice {
+
+  background-color: #ffff99;
+	color: #996633;
+	border: 1px solid #996633;
+	padding: 6px 12px;
+	
+}
+
+.field_with_errors {
+	
+	display: inline;
+	
+}
+
+.field_with_errors input {
+	
+  padding: 2px;
+  background-color: #ffcccc;
+	border: 1px solid #990000;
+
+}
+
+#error_explanation {
+	
+  width: 450px;
+  border: 2px solid red;
+  padding: 7px;
+  padding-bottom: 0;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+
+}
+
+#error_explanation h2 {
+	
+  text-align: left;
+  font-weight: bold;
+  padding: 5px 5px 5px 15px;
+  font-size: 12px;
+  margin: -7px;
+  margin-bottom: 0px;
+  background-color: #c00;
+  color: #fff;
+
+}
+
+#error_explanation ul li {
+	
+  font-size: 12px;
+  list-style: square;
+
+}

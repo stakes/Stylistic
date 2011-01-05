@@ -4,7 +4,7 @@ class StylisticGenerator < ::Rails::Generators::Base
   
   source_root File.expand_path('../templates', __FILE__)
   
-  @@styles_dest = 'public/stylesheets/'
+  @@styles_dest = 'public/stylesheets/stylistic/'
   @@framework_dest = 'public/stylesheets/framework/'
   @@js_dest = 'public/javascripts/jquery/'
   
@@ -60,9 +60,7 @@ class StylisticGenerator < ::Rails::Generators::Base
     end
     
     def include_scaffold
-      
-      # include scaffold styles when they're ready
-      
+      copy_file('stylistic-scaffold.css', File.join(@@styles_dest, 'stylistic-scaffold.css')) unless File.exist?(File.join(@@styles_dest, 'stylistic-scaffold.css'))
     end
     
     def include_html5reset
