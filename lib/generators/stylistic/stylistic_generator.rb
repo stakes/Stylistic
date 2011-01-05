@@ -28,13 +28,13 @@ class StylisticGenerator < ::Rails::Generators::Base
     
     include_jqueryui if options.jqueryui 
     
-    if options.blueprint
-      include_blueprint
-    elsif options.squaregrid
+    if options.squaregrid
       include_squaregrid
     elsif options.less
       include_less
-    else
+    elsif options.blueprint
+      include_blueprint
+    elsif options.gs
       include_960
     end
     
