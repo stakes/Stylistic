@@ -10,7 +10,7 @@ Gem::Specification.new do |s|
   s.email       = ["stakes@jaystakelon.com"]
   s.homepage    = ""
   s.summary     = %q{Upgrade your default stylesheet and much more}
-  s.description = %q{This gem will make your Rails project so stylistic by installing (better) default scaffold styles, popular CSS grid frameworks and jQuery.}
+  s.description = %q{This gem will help make your Rails project so stylistic by installing (better) default scaffold styles, popular CSS grid frameworks and jQuery.}
 
   s.rubyforge_project = "stylistic"
 
